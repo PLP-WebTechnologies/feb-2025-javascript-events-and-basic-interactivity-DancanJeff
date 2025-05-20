@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+        <button class="tab-btn active" data-tab="gallery">Gallery</button>
+        <button class="tab-btn" data-tab="form">Contact Form</button>
+        <button class="tab-btn" data-tab="interactive">Interactive</button>
+    </nav>
+
+    <!-- Tab Content Sections -->
+    <main class="tab-content">
+        <!-- Gallery Section -->
+        <section id="gallery" class="tab-pane active">
+            <h2>Image Gallery</h2>
+            <div class="gallery-container">
+                <button class="gallery-nav prev">❮</button>
+                <div class="gallery-wrapper">
+                    <img src="https://picsum.photos/600/400?random=1" alt="Gallery Image 1" class="gallery-img active">
+                    <img src="https://picsum.photos/600/400?random=2" alt="Gallery Image 2" class="gallery-img">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Gallery Image 3" class="gallery-img">
+                </div>
+                <button class="gallery-nav next">❯</button>
+                <div class="gallery-dots"></div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form" class="tab-pane">
+            <h2>Contact Form</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" required>
+                    <span class="error-message"></span>
+                    <div class="password-strength"></div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section id="interactive" class="tab-pane">
+            <h2>Interactive Elements</h2>
+            <div class="interactive-container">
+                <button id="colorButton" class="color-change-btn">Change My Color</button>
+                <div class="hover-box">
+                    <p>Hover over me!</p>
+                </div>
+                <div class="key-press-box">
+                    <p>Press any key</p>
+                    <div class="key-display"></div>
+                </div>
+                <button id="secretButton" class="secret-btn">Double Click Me!</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
